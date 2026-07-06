@@ -1,0 +1,43 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+            Scanner sc=new Scanner(System.in);
+            int n=sc.nextInt();
+            int [][]arr=new int[n][n];
+            for(int i=0;i<n;i++){
+                for(int j=0;j<n;j++){
+                    arr[i][j]=sc.nextInt();
+                }
+            }
+            
+            int f_d=0;
+            int b_d=0;
+            
+            for(int i=0;i<n;i++){
+                for(int j=0;j<n;j++){
+                    if(i==j){
+                        f_d+=arr[i][j];
+                    }
+                }
+            }
+            for(int i=0;i<n;i++){
+                for(int j=0;j<n;j++){
+                    if(i+j==n-1){
+                        b_d+=arr[i][j];
+                    }
+                }
+            }
+            if(f_d==b_d){
+                System.out.print("Yes");
+            }
+            else{
+                System.out.print("No");
+            }
+    }
+}
