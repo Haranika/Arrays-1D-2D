@@ -1,4 +1,4 @@
-LEETCODE PROBLEM:NO 33
+//LEETCODE PROBLEM:NO 33
   
   int search(int* nums, int numsSize, int target) {
     int left=0, right=numsSize-1;
